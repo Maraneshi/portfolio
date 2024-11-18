@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maraneshi's Portfolio</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="robots" content="index, archive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="ZJ8tLJVKf9I0aKYguit8CTb2jMFPQLpaJhT1YpQ4eNo" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src data: 'self';">
+
+    <meta name="keywords" content="Maraneshi, portfolio" />
+    <meta name="description" content="Maraneshi: game engine programmer, embedded systems, graphics" />
+    <meta property="og:title" content="Maraneshi's Portfolio" />
+    <meta property="og:description" content="Maraneshi: game engine programmer, embedded systems, graphics" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://maraneshi.github.io/portfolio" />
+    <meta property="og:image" content="https://maraneshi.github.io/portfolio/media/portfolio.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maraneshi's Portfolio" />
+    <meta name="twitter:image" content="https://maraneshi.github.io/portfolio/media/portfolio.jpg" />
+    <meta name="twitter:description" content="Maraneshi: game engine programmer, embedded systems, graphics" />
+    <meta name="twitter:creator" content="@maraneshi" />
+    <meta name="twitter:site" content="@maraneshi" />
+
+    <style>
+        @font-face {
+            font-family: "Source Sans 3";
+            src: local("Source Sans 3"), local("SourceSans3-Regular"), url("fonts/SourceSans3-Regular.ttf.woff2");
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Sans 3";
+            src: local("Source Sans 3 Bold"), local("SourceSans3-Bold"), url("fonts/SourceSans3-Bold.ttf.woff2");
+            font-weight: bold;
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Sans 3";
+            src: local("Source Sans 3 Italic"), local("SourceSans3-It"), url("fonts/SourceSans3-It.ttf.woff2");
+            font-style: italic;
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Code Pro";
+            src: local("Source Code Pro"), local("SourceCodePro-Regular"), url("fonts/SourceCodePro-Regular.ttf.woff2");
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Code Pro";
+            src: local("Source Code Pro Bold"), local("SourceCodePro-Bold"), url("fonts/SourceCodePro-Bold.ttf.woff2");
+            font-weight: bold;
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Serif 4 SubHead";
+            src: local("Source Serif 4 SubHead"), local("SourceSerif4SubHead-Regular"), url("fonts/SourceSerif4SubHead-Regular.ttf.woff2");
+            font-display: block; /* wait until font is loaded */
+        }
+
+        @font-face {
+            font-family: "Source Serif 4 SubHead";
+            src: local("Source Serif 4 SubHead Bold"), local("SourceSerif4SubHead-Bold"), url("fonts/SourceSerif4SubHead-Bold.ttf.woff2");
+            font-weight: bold;
+            font-display: block; /* wait until font is loaded */
+        }
+
+
+        :root {
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 18px;
+        }
+
+        .code {
+            font-family: "Source Code Pro", monospace;
+            font-size: 16px;
+            white-space: pre;
+        }
+
+        code {
+            font-family: "Source Code Pro", monospace;
+            white-space: pre;
+            background-color: #EEEEEE;
+            font-size: 0.94em; /* more in line with surrounding text */
+            display: inline-block; /* disable text justification */
+        }
+
+        #main_article p, #main_article i {
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+        sup {
+            line-height: 100%;
+            font-size: 0.89em;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Source Serif 4 SubHead';
+            color: #5a4ebf;
+            text-align: center;
+        }
+
+        h4 {
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+        }
+
+        h3 {
+            font-size: 1.6em;
+        }
+
+        h1 {
+            font-size: 2.2em;
+        }
+
+        dfn {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        var {
+            font-weight: normal;
+            font-style: normal;
+            font-family: math;
+        }
+
+        .article_width {
+            margin: 0px auto;
+            width: 60em;
+            max-width: 100%;
+        }
+
+        input {
+            vertical-align: middle;
+        }
+
+        output {
+            vertical-align: middle;
+        }
+
+        label {
+            line-height: 1.4;
+        }
+
+        button {
+            min-height: 2.2em;
+            font-family: Arial, sans-serif;
+        }
+
+        .center {
+            margin: auto;
+            width: fit-content;
+            max-width: 95%;
+            text-align: center;
+        }
+
+        #theme_toggle_label {
+            display: block;
+            width: 52px !important;
+            height: 24px;
+            background-color: #5a4ebf;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+            #theme_toggle_label::after {
+                content: "";
+                width: 18px;
+                height: 18px;
+                background-color: #A0A0F4;
+                position: absolute;
+                border-radius: 10px;
+                top: 3px;
+                left: 3px;
+                transition: 0.5s;
+            }
+
+        #theme_toggle_switch:checked + #theme_toggle_label:after {
+            left: calc(100% - 3px);
+            transform: translateX(-100%);
+        }
+
+        #modal_bg {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgb(0,0,0); /* fallback color ??? */
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal_content {
+            margin: auto;
+            display: block;
+            max-width: calc(100% - 2*50px); /* subtract padding from both sides */
+            max-height: calc(100% - 2*50px);
+        }
+
+        #modal_close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            #modal_close:hover,
+            #modal_close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        td, th {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        th {
+            text-align: start;
+        }
+
+        /* make sure our images/videos are appropriately sized on narrow screens */
+        img {
+            max-width: 100%;
+        }
+
+        video {
+            max-width: 100%;
+        }
+
+        /* vertical phone */
+        @media only screen and (max-width: 800px) {
+            #modal_content {
+                max-width: 100%; /* no more horizontal padding */
+            }
+        }
+        /* horizontal phone */
+        @media only screen and (max-height: 800px) {
+            #modal_content {
+                max-height: 100%; /* no more vertical padding */
+            }
+        }
+
+        .project_link {
+            position: relative;
+            text-align: right;
+            font-size: 22px;
+            font-family: 'Source Sans 3';
+            float: right;
+            top: 10px;
+        }
+
+    </style>
+    <style title="CBV Dark Theme">
+        /* based on VS-Dark from Monaco */
+        :root {
+            color: rgb(212, 212, 212);
+            background-color: rgb(30, 30, 30);
+        }
+
+        input {
+            color: rgb(204, 204, 204);
+            background-color: rgb(60, 60, 60);
+            border-color: rgb(118, 118, 118);
+        }
+
+        button {
+            color: rgb(255, 255, 255);
+            background-color: rgb(14, 99, 156);
+            border-color: rgb(118, 118, 118);
+        }
+
+        code {
+            background-color: #3C3C3C;
+        }
+
+        a {
+            color: #4e94de;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #A0A0F4; /* alternatives: #b3b3ff #b197fc */
+        }
+    </style>
+</head>
+<body>
+    <div id="modal_bg">
+        <span id="modal_close" onclick="HideModal();">✖</span>
+        <img id="modal_content"/>
+        <div id="modal_caption"></div> <!-- TODO this is not styled correctly, do not use -->
+    </div>
+    <script>
+        modal_bg.addEventListener("click", (e) => { if (!modal_content.contains(e.target)) HideModal(); }, { passive: true });
+        addEventListener("keyup", (e) => { if (e.key == "Escape") HideModal(); }, { passive: true });
+        function HideModal() {
+            modal_bg.style.display = "none";
+            modal_content.src = "";
+            modal_caption.innerText = "";
+        }
+        function CreateModalImage(path, caption) {
+            modal_bg.style.display = "flex";
+            modal_content.src = path;
+            modal_caption.innerText = caption ? caption : "";
+        }
+        customElements.define("link-svg", class extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 0 512 512">--><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->` +
+                `<path fill="#4e94de" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z" /></svg >`;
+            }
+        });
+    </script>
+    <main>
+        <article id="main_article">
+            <div>
+                <h1 style="margin-block-end:6px" class="center">Mara's Portfolio</h1>
+                <div class="center">
+                    <input id="theme_toggle_switch" name="theme_toggle_switch" type="checkbox" style="visibility:hidden; display:none" checked="checked" autocomplete="off"
+                           onchange="
+    let s = document.querySelector('[title=&quot;CBV Dark Theme&quot;]');
+    s.disabled = !s.disabled;
+    if (s.disabled) { theme_toggle_label.style = 'text-align:right'; theme_toggle_label.textContent = '🌞'; }
+    else            { theme_toggle_label.style = 'text-align:left';  theme_toggle_label.textContent = '🌙';}" />
+
+                    <label id="theme_toggle_label" for="theme_toggle_switch" class="center" style="text-align:left">🌙</label>
+                </div>
+            </div>
+
+            <div class="article_width">
+                <hr />
+                <h3 id="About_Me">About Me</h3>
+                <p>
+                    Hi, my name is Mara and I am primarily a C++ developer with experience in games and embedded systems. I feel most at home doing deep dives into debugging problems and
+                    anything where I can have a metric to optimize (frame time, compile time, export time, etc.). I put out fires wherever and whenever they come up and try to help my team be productive
+                    by improving the tools they work with. Graphics are a particular fondness of mine, as evidenced by many pretty pictures below.
+                </p>
+                <table>
+                    <tr><th>Languages</th><td>German (Native/C2), English (C1)</td></tr>
+                    <tr><th>Programming Languages</th><td>C, C++, HLSL, x86 assembly (SSE/AVX), C#, Java</td></tr>
+                    <tr><th>APIs</th><td>Direct3D 11, Win32, Direct3D 12, CUDA</td></tr>
+                    <tr><th>Software</th><td>Visual Studio, Git, Optick, RenderDoc, Nsight, PIX</td></tr>
+                </table>
+
+                <hr />
+                <h3 id="W3D_Hub">W3D Hub - Game Engine Programmer (Volunteer Team, 2018-2024)<a href="https://www.w3dhub.com/" class="project_link" target="_blank"><link-svg/></a></h3>
+                
+                <div class="center">
+                    <img src="./media/W3D 8.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 8.jpg');" />
+                    <img src="./media/W3D 10.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 10.jpg')" />
+                    <img src="./media/W3D 11.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 11.jpg')" />
+                </div>
+                <div class="center">
+                    <i>screenshots from an <a href="https://incursion.zone/">associated project</a> on the W3D engine</i>
+                </div>
+
+                <p>
+                    <a href="https://www.w3dhub.com/">W3D Hub</a> is a non-profit team of volunteers developing standalone games based on reverse engineering the engine of <i>Command &amp; Conquer: Renegade</i>.
+                    All games are 3D online multiplayer first-person shooters including vehicle gameplay. At this point the code base weighs over 600 thousand lines of C++ code and has over 20 years of history.
+                    As a volunteer team, people come and go and take breaks, so the number of active developers varies around 10-15 at any given point in time, with about half of those being programmers.
+                </p>
+                <p>
+                    I worked on enhancing core systems across the entire engine, including rendering (D3D11), networking and physics and
+                    also the associated tools like the level editor, asset cooking tool (C#) and a 3ds Max plug-in. I also supported other
+                    developers, designers and artists with in-game design and debug tools, advice on performance-optimizing
+                    assets as well as how to use Git safely and effectively. Goals and requirements for new features
+                    and improvements were discussed as a team and I helped research trade-offs of various solutions.
+                </p>
+                <div class="center">
+                    <img src="./media/W3D 1.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 1.jpg')" />
+                    <img src="./media/W3D 2.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 2.jpg')" />
+                    <img src="./media/W3D 3.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 3.jpg')" />
+                </div>
+                <p>
+                    Most of the code was poorly understood and undocumented, so I used my deep analysis skills to establish why it was originally written in the specific
+                    way it was and what changes could be made to it regarding either new features or bugfixes. Sometimes the code was freshly reverse-engineered and without variable names.
+                    My goal is always to leave the code in a better state than I find it, so I frequently added code comments to explain the "why" of the design or note other important information to prevent future bugs.
+                    Debugging complex issues was my specialty, often including unreproducible crashes from user-provided crash dumps.
+                    I employed several external tools to help improve the engine, including static code analysis, Address Sanitizer (once it was released for MSVC)
+                    and integrating profiling tools (Optick, VTune, plus custom in-game profiler). Introducing multi-threading was a challenge due to the original code
+                    not taking threads into consideration at all, so every function in the entire call graph had to be vetted for e.g. static variables or other non-thread-safe constructs.
+                </p>
+                <div class="center">
+                    <img src="./media/W3D 4.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 4.jpg')" />
+                    <img src="./media/W3D 5.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 5.jpg')" />
+                    <img src="./media/W3D 6.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 6.jpg')" />
+                    <div class="center">
+                        <i style="white-space:pre">left: tone mapping shader gone wrong   |  </i>
+                        <i style="white-space:pre">middle: stealth shader experiment   |  </i>
+                        <i style="white-space:pre">right: spherical-capped light cone culling</i>
+                    </div>
+                </div>
+                <p>
+                    I ported the engine and tools to 64-bit and fixed an innumerous amount of crashes, memory leaks and possible buffer overflows.
+                    The implementation of clustered forward lighting and instancing into the aging renderer was achieved with my involvement and I introduced data compression into our asset pipeline.
+                    I optimized not just parts of the player-facing engine, but also made several artist workflows significantly faster, e.g. static light baking, asset export from 3ds Max,
+                    pathfind data generation and enabling modifying gameplay parameters directly in-game.
+                    Occasionally I would dip into gameplay code, e.g. implementing the mouse-based control scheme for CTOL aircraft via a PID controller
+                    and new logic for spell-like "weapons" that shoot immediately when selected and have cooldowns.
+                    I also improved C++ project build times by 50-100% (wall clock time, CPU time in the compiler was improved up to 220%) through removing unneeded includes,
+                    moving inline function declarations to cpp files and forward declaration (cautiously using the PImpl pattern in some cases).
+                </p>
+
+                <hr />
+                <h3 id="Robotics_Lab">[REDACTED] Robotics Lab - Student Research Assistant (2016-2018)</h3>
+                <div class="center" style="display: flex; justify-content: center; align-items: center; flex-flow:wrap;">
+                    <img src="./media/motor control overview.png" width="500" style="margin-left: 4px; margin-right: 4px;" onclick="CreateModalImage('./media/motor control overview.png');" />
+                    <img src="./media/motor control PWM.png" width="500" style="margin-top: 4px" onclick="CreateModalImage('./media/motor control PWM.png')" />
+                </div>
+                <p>
+                    The first project at the robotics lab was a motor control application in C for brushless DC motors utilizing the real-time operating system PXROS-HR
+                    on the Infineon Aurix TriCore platform with cooperative multi-threading. My task was to figure out how to coordinate the various hardware timer modules
+                    in a way that resulted in specific PWM patterns on the physical pins connected to the motors, while also triggering ADC measurements from the motors
+                    and an interrupt service routine on the CPU cores computing the PWM duty cycles for the next period from those measurements, all in sync with sub-microsecond precision.
+                    After the implementation, I documented my approach and the various characteristics and features of the hardware used so that others could expand on it,
+                    the above pictures are part of that documentation.
+                </p>
+                <div class="center">
+                    <img src="./media/HexBot.jpg" style="max-height:360px" onclick="CreateModalImage('./media/HexBot.jpg')" />
+                    <video style="max-height:360px" src="./media/video/rviz_demo.mp4" controls preload="none" poster="./media/video/rviz_demo.jpg"></video>
+                </div>
+                <div class="center">
+                    <i>photo of the mobile robot and a video showing monitoring software while it is navigating a real environment</i>
+                </div>
+                <p>
+                    Later on I would work with a fellow student on an autonomous mobile robot (pictured above) including both the embedded motor control side and higher level tasks running on Linux on a Raspberry Pi,
+                    using the ROS (Robot Operating System) C++ framework.
+                    This involved merging the images of multiple 2D LiDAR scanners to map the surrounding area, combining odometry data from three separate wheel motors with an inertial measurement unit
+                    and the map to estimate the current position, velocity and orientation and coordinating the motors to drive towards a goal position and orientation in the most efficient way.
+                    The three wheels could each rotate around their own axis separately, which made reconstructing linear and angular velocity for whole-robot odometry challenging.
+                    Since direct analytic solutions for inverse kinematics tend to only work for one or two specific movement patterns like turning in place, moving linearly or a circular curve
+                    and our particular wheel setup was not commonly found in literature, I devised a least-squares fit algorithm where based on the input speed and angle of each motor,
+                    it tries to iteratively find a linear and angular velocity that would result in those input values.
+                </p>
+                <div class="center">
+                    <img src="./media/docking.png" style="max-height:280px" onclick="CreateModalImage('./media/docking.png')" />
+                </div>
+                <div class="center">
+                    <i>diagram of a robot on the bottom trying to dock to another robot, <var style="font-weight:bold">T</var> being the initial parallel target point</i>
+                </div>
+                <p>
+                    The topic of my (unfinished) thesis project was making the robot find specific patterns in its LiDAR data to detect charging stations and/or other robots of the same type
+                    and autonomously approaching them for docking. The patterns were realized using retro-reflectors since the laser scanner not only records distance but also reflection intensity.
+                    I performed a series of measurements characterizing the reflection properties of various materials in the scanner image to devise an ideal intensity threshold for detecting retroreflectors
+                    and how accurate the distance measurements are. The docking maneuver itself is based on devising an initial target position parallel to the pattern / docking station and subsequently
+                    linearly approaching from there with dynamic corrections based on sensor data.
+                </p>
+
+                <hr />
+                <h3 id="HLSL_Constant_Buffers">HLSL Constant Buffer Packing Rules &amp; Layout Visualizer (2024)<a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/" class="project_link" target="_blank"><link-svg /></a></h3>
+                <div class="center">
+                    <img src="./media/hlsl_cbuffer_layout_visualizer.png" onclick="CreateModalImage('./media/hlsl_cbuffer_layout_visualizer.png')" />
+                </div>
+                <p>
+                    I wrote <a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/">an article</a> about HLSL constant buffer packing rules,
+                    which also includes a custom HLSL parser and visualizer so users can check the memory layout of their own structures. The rules for constant buffers
+                    are fairly unusual and often confusing because they do not only rely on type alignment and effectively allow other variables into preceding padding in some cases.
+                    Most explanations I could find were extremely hand-wavy about those rules, so I decided to make this the one true source for HLSL memory layouts.
+                    The entire site was written from scratch (just like this page) except for the code editor (Monaco) and a string compression library.
+                </p>
+
+                <hr />
+                <h3 id="Tank_Wars">Tank Wars - University Game Project in Unity (2016)</h3>
+                <div class="center">
+                    <video style="max-height:400px" src="./media/video/TankWars.mp4" controls preload="none" poster="./media/video/TankWars.png" />
+                </div>
+                <p>
+                    As part of my university studies, I formed a team with two fellow students to make a small top-down shooter game in Unity (C#).
+                    It is based on a Flash game called Bubble Tanks and features an infinite world of small arenas where the difficulty and number of enemies increases with distance from the starting position.
+                    We utilized sparse arrays for generating the world in small chunks, the decorator pattern to dynamically apply modifiers to different base weapons and object pooling to minimize stutters.
+                    We were not graded on audiovisual quality and had several other projects due in the same semester, hence the bare-bones graphics in the video above.
+                </p>
+
+                <hr />
+                <h3 id="MiniRayTracer">MiniRayTracer - CPU Path Tracer (2016-2018)<a href="https://github.com/Maraneshi/MiniRayTracer" class="project_link" target="_blank"><link-svg /></a></h3>
+                <div class="center">
+                    <img src="./media/MiniRayTracer8a.jpg" style="max-height:320px" onclick="CreateModalImage('./media/fullsize/MiniRayTracer8a.png')" />
+                    <img src="./media/MiniRayTracer7.jpg" style="max-height:320px" onclick="CreateModalImage('./media/fullsize/MiniRayTracer7.png')" />
+                    <video style="max-height:320px" src="./media/video/MiniRayTracer_hilbert.mp4" controls preload="none" poster="./media/video/MiniRayTracer_hilbert.jpg" />
+                </div>
+                <p>
+                    A <a href="https://github.com/Maraneshi/MiniRayTracer">CPU path tracer</a> written in C++ based on the mini-book series <a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a>.
+                    Enhancements beyond the book contents include vector-style SIMD acceleration, tile-based multi-threading, live preview, triangle
+                    meshes, tone mapping, correct transmission/refraction, no dynamic allocations and ordered BVH traversal. I went a bit overboard with OOP here to fit with the original book's design, maybe
+                    I'll improve that at some point...
+                </p>
+
+                <hr />
+                <h3 id="CUDA_Mandelbrot">CUDA Mandelbrot Set Explorer (2017)<a href="https://github.com/Maraneshi/cuda-mandelbrot" class="project_link" target="_blank"><link-svg /></a></h3>
+                <div class="center">
+                    <img src="./media/mandelbrot_5_1920.jpg" width="482" onclick="CreateModalImage('./media/fullsize/mandelbrot_5_1920.jpg')" />
+                    <img src="./media/mandelbrot_7_1440p.jpg" width="482" onclick="CreateModalImage('./media/fullsize/mandelbrot_7_1440p.jpg')" />
+                </div>
+                <p>
+                    A <a href="https://github.com/Maraneshi/cuda-mandelbrot">Mandelbrot set visualizer</a> using CUDA and C++, displayed via an OpenGL-based GUI or command line bitmap file output.
+                    I used C++ template specialization to generate optimized GPU kernels for each combination of fractal type, coloring variant and floating-point type.
+                </p>
+                <p style="margin-bottom:2px">
+                    The supported fractal type are:
+                </p>
+                <table>
+                    <tr><td style="display:inline list-item">Mandelbrot set:</td><td><var>z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c</var></td></tr>
+                    <tr><td style="display:inline list-item">Cubed Mandelbrot:</td><td><var>z<sub>n+1</sub> = z<sub>n</sub><sup>3</sup> + c</var></td></tr>
+                    <tr><td style="display:inline list-item">Arbitrary exponent:</td><td><var>z<sub>n+1</sub> = z<sub>n</sub><sup>x</sup> + c</var></td></tr>
+                    <tr><td style="display:inline list-item">Burning Ship:</td><td><var>z<sub>n+1</sub> = (|Re(z<sub>n</sub>)| + i|Im(z<sub>n</sub>)|)<sup>2</sup> - c</var></td></tr>
+                </table>
+                <p>
+                    The program exposes quite a lot of parameters that can result in very interesting visuals, especially when animated (see below).
+                </p>
+                <div class="center">
+                    <video width="320" src="./media/video/Mandelbrot6a.mp4" controls preload="none" poster="./media/video/Mandelbrot6a.jpg"></video>
+                    <video width="320" src="./media/video/Mandelbrot7a.mp4" controls preload="none" poster="./media/video/Mandelbrot7a.jpg"></video>
+                    <video width="320" src="./media/video/Mandelbrot10a.mp4" controls preload="none" poster="./media/video/Mandelbrot10a.jpg"></video>
+                </div>
+
+                <hr />
+                <h3 id="Insight">"Insight" Spectator UI for Natural Selection 2 (2012)<a href="https://forums.unknownworlds.com/discussion/117794" class="project_link" target="_blank"><link-svg /></a></h3>
+                <div class="center">
+                    <img src="./media/Insight.jpg" width="800" onclick="CreateModalImage('./media/fullsize/Insight.jpeg')" />
+                </div>
+                <p>
+                    A <a href="https://forums.unknownworlds.com/discussion/117794">UI modification for Natural Selection 2</a> written in Lua, enhancing the spectator and broadcast experience of
+                    the game. I established how to send detailed game information from the server exclusively to spectator clients and designed the initial UI before teaming up with another
+                    programmer and an artist to further enhance the visual design and capabilities.
+                    I also briefly worked on a first-person spectator mode that was subsequently made impossible by an engine update.
+                    This mod was eventually acquired by Unknown Worlds Entertainment and shipped officially with the full release of the game.
+                </p>
+
+                <hr />
+                <h3 id="WelcomeBot">WelcomeBot - University Robotics Project (2016)</h3>
+                <div class="center">
+                    <img src="./media/WelcomeBotPhoto.jpg" style="max-height:480px" onclick="CreateModalImage('./media/fullsize/WelcomeBotPhoto.jpg')" />
+                    <img src="./media/WelcomeBotDiagram.png" style="max-height:480px" onclick="CreateModalImage('./media/WelcomeBotDiagram.png')" />
+                </div>
+                <p>
+                    As a team of 6 people, we were assigned a project at the university robotics lab to automatically adjust a tablet mounted to a robotic arm to an appropriate height
+                    and angle towards the person standing in front of the robot, so that they can interact with it comfortably. We used OpenCV to detect a person's face in the camera image from the tablet
+                    (in the photo above we just attached a webcam for testing) and a LiDAR scanner attached to the robot determined the distance to the person in front of it. Through
+                    a lot of measurements and some basic linear algebra and trigonometry, the height and relative position of the person are calculated in order to rotate the robot
+                    and adjust the arm towards the person. The logic for all of this was integrated into the ROS (Robot Operating System) C++ framework running on Linux.
+                    This project led to two of us receiving the offer for the aforementioned job as student research assistants.
+                </p>
+
+                <hr />
+                <h3 id="Distributed_Systems">RPC Directory Service - University Distributed Systems Project (2018)</h3>
+                <div class="center">
+                    <img src="./media/DistributedSystems_CallService.png" style="max-height:330px" onclick="CreateModalImage('./media/DistributedSystems_CallService.png')" />
+                    <img src="./media/DistributedSystems_CallTunneledService.png" style="max-height:330px" onclick="CreateModalImage('./media/DistributedSystems_CallTunneledService.png')" />
+                </div>
+                <p>
+                    In this university project using Java, we created a system where a distributed network of nodes (different computers, applications) can communicate with each other through services
+                    (remote procedure calls, RPC) and perform computation or data retrieval. A central registry owns the database of nodes and services available to everyone, where registering a node or service
+                    is itself realized as calling a service on the registry, so everything uses the same underlying mechanisms. Data marshaling is configurable per-service and the entire protocol is designed
+                    to be versionable and backwards-compatible. The network communication happens directly via basic TCP sockets and can optionally be tunneled through the registry via an internal wrapper
+                    service, which can also automatically handle different protocol versions and marshaling on both ends. The team consisted of 6 people and I was responsible for the protocol design and the
+                    entire corresponding backend implementation.
+                </p>
+
+                <hr />
+                <h3 id="W3D_Renders">Offline Renders for W3D Hub (2018)</h3>
+                <div class="center">
+                    <img src="./media/w3drender_cruiserc_1aa.jpg" width="333" onclick="CreateModalImage('./media/fullsize/w3drender_cruiserc_1aa.jpg')" />
+                    <img src="./media/w3drender_migc_1.jpg" width="333" onclick="CreateModalImage('./media/fullsize/w3drender_migc_1.jpg')" />
+                    <img src="./media/w3drender_destc_3.jpg" width="333" onclick="CreateModalImage('./media/fullsize/w3drender_destc_3.jpg')" />
+                    <img src="./media/w3drender_water_shader.jpg" width="1008" onclick="CreateModalImage('./media/fullsize/w3drender_water_shader.png')" />
+                </div>
+                <p>
+                    The team at W3D Hub received new assets for our game <a href="https://w3dhub.com/games/red-alert-a-path-beyond/">Red Alert: A Path Beyond</a> in 2018, some of them for brand new units and gameplay mechanics, so I wanted to celebrate
+                    that by making some promotional renders in Blender, some of them reminiscent of cutscenes from the original <i>Red Alert</i> game
+                    (<a onclick="CreateModalImage('./media/w3drender_mig_cinematic.png')">MiG cinematic shot</a>, <a onclick="CreateModalImage('./media/w3drender_cruiser_cinematic.png')">Cruiser cinematic shot</a>).
+                    The fire/smoke and water shaders (the latter is pictured above) evolved a lot over the course of making these renders.
+                    I had never used Blender or really any 3D software like this before, so for 5 days of work I think these are pretty good results.
+                </p>
+            </div>
+        </article>
+    </main>
+    <script>
+        function d(a) {
+            let r = [];
+            for (let i = 0; i < a.length; i++) {
+                let p = (i > 1) ? a[i - 1] : 1;
+                r.push(((a[i] ^ p) - (i % 7) - (i * 277) - 153));
+            }
+            return String.fromCharCode(...r);
+        }
+        const a1 = [221,543,300,1379,49,1627,458,2438,41,2708,282,3583,1009,3361,7437,3139,7752,3374,6570,3108,6792,3382];
+        const a2 = [263,529,319,1400,29,1643,316,2479,8,2756,344,3497,82,3952,8016,3653,7199,3945,7138,3707,6345,3848,6107,3703,5248,2201,5556];
+        const a3 = [184,543,296,723,1974,473,1627,3607,1954,3429,1716,2649,1954,2238,6284,2169,6709,2368,7543,2262,7805,2506,4418,2210,5025,4031,4747,3278,5020,13191,4615,12426,5079,14096,4801,13340,5042,15014,4285,15242,6081,15083];
+        let intro = About_Me.nextElementSibling;
+        intro.append(d(a1).slice(0, -8));
+        let a = document.createElement("a");
+        a.onmouseenter = () => { a.href = d(a2); };
+        a.onpointerenter = () => { a.href = d(a2); };
+        a.onfocus = () => { a.href = d(a2); };
+        a.textContent = d(a1).slice(-8);
+        a.tabIndex = 0;
+        intro.appendChild(a);
+        intro.append(d(a3));
+    </script>
+    <footer class="article_width" style="text-align:center">
+        <hr style="margin-top:16px; margin-bottom:16px" />
+        <p>
+            Copyright &copy; 2024 Maraneshi
+        </p>
+        <a href="https://twitter.com/maraneshi" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#A0A0F4" d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" /></svg></a>
+        <a href="https://mastodon.gamedev.place/@Maraneshi" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#A0A0F4" d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z" /></svg></a>
+        <a href="https://maraneshi.bsky.social" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="48" width="48" viewBox="0 0 600 530"><path fill="#A0A0F4" d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" /></svg></a>
+        <a href="https://twitch.tv/maraneshi" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#A0A0F4" d="M391.2 103.5H352.5v109.7h38.6zM285 103H246.4V212.8H285zM120.8 0 24.3 91.4V420.6H140.1V512l96.5-91.4h77.3L487.7 256V0zM449.1 237.8l-77.2 73.1H294.6l-67.6 64v-64H140.1V36.6H449.1z" /></svg></a>
+        <a href="https://github.com/maraneshi" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#A0A0F4" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></svg></a>
+        <a href="https://buymeacoffee.com/maraneshi" style="padding:8px;"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#A0A0F4" d="M169.7 .9c-22.8-1.6-41.9 14-47.5 34.7L110.4 80c.5 0 1.1 0 1.6 0c176.7 0 320 143.3 320 320c0 .5 0 1.1 0 1.6l44.4-11.8c20.8-5.5 36.3-24.7 34.7-47.5C498.5 159.5 352.5 13.5 169.7 .9zM399.8 410.2c.1-3.4 .2-6.8 .2-10.2c0-159.1-128.9-288-288-288c-3.4 0-6.8 .1-10.2 .2L.5 491.9c-1.5 5.5 .1 11.4 4.1 15.4s9.9 5.6 15.4 4.1L399.8 410.2zM176 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm64 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM96 384a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" /></svg></a>
+    </footer>
+    <div style="height:calc(100vh - (1.3em * 7));"></div>
+</body>
+</html>
