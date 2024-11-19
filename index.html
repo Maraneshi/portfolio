@@ -366,8 +366,21 @@
                 </table>
 
                 <hr />
-                <h3 id="W3D_Hub">W3D Hub - Game Engine Programmer (Volunteer Team, 2018-2024)<a href="https://www.w3dhub.com/" class="project_link" target="_blank"><link-svg/></a></h3>
-                
+                <h3 id="HLSL_Constant_Buffers">HLSL Constant Buffer Packing Rules &amp; Layout Visualizer (2024)<a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/" class="project_link" target="_blank"><link-svg /></a></h3>
+                <div class="center">
+                    <img src="./media/hlsl_cbuffer_layout_visualizer.png" onclick="CreateModalImage('./media/hlsl_cbuffer_layout_visualizer.png')" />
+                </div>
+                <p>
+                    I wrote <a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/">an article</a> about HLSL constant buffer packing rules,
+                    which also includes a custom HLSL parser and visualizer so users can check the memory layout of their own structures. The rules for constant buffers
+                    are fairly unusual and often confusing because they do not only rely on type alignment and effectively allow other variables into preceding padding in some cases.
+                    Most explanations I could find were extremely hand-wavy about those rules, so I decided to make this the one true source for HLSL memory layouts.
+                    The entire site was written from scratch (just like this page) except for the code editor (Monaco) and a string compression library.
+                </p>
+
+                <hr />
+                <h3 id="W3D_Hub">W3D Hub - Game Engine Programmer (Volunteer Team, 2018-2024)<a href="https://www.w3dhub.com/" class="project_link" target="_blank"><link-svg /></a></h3>
+
                 <div class="center">
                     <img src="./media/W3D 8.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 8.jpg');" />
                     <img src="./media/W3D 10.jpg" width="333" onclick="CreateModalImage('./media/fullsize/W3D 10.jpg')" />
@@ -415,7 +428,7 @@
                 </div>
                 <p>
                     I ported the engine and tools to 64-bit and fixed an innumerous amount of crashes, memory leaks and possible buffer overflows.
-                    The implementation of clustered forward lighting and instancing into the aging renderer was achieved with my involvement and I introduced data compression into our asset pipeline.
+                    I contributed to the implementation of clustered forward lighting and instancing into the aging renderer and introduced data compression into our asset pipeline.
                     I optimized not just parts of the player-facing engine, but also made several artist workflows significantly faster, e.g. static light baking, asset export from 3ds Max,
                     pathfind data generation and enabling modifying gameplay parameters directly in-game.
                     Occasionally I would dip into gameplay code, e.g. implementing the mouse-based control scheme for CTOL aircraft via a PID controller
@@ -470,31 +483,6 @@
                 </p>
 
                 <hr />
-                <h3 id="HLSL_Constant_Buffers">HLSL Constant Buffer Packing Rules &amp; Layout Visualizer (2024)<a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/" class="project_link" target="_blank"><link-svg /></a></h3>
-                <div class="center">
-                    <img src="./media/hlsl_cbuffer_layout_visualizer.png" onclick="CreateModalImage('./media/hlsl_cbuffer_layout_visualizer.png')" />
-                </div>
-                <p>
-                    I wrote <a href="https://maraneshi.github.io/HLSL-ConstantBufferLayoutVisualizer/">an article</a> about HLSL constant buffer packing rules,
-                    which also includes a custom HLSL parser and visualizer so users can check the memory layout of their own structures. The rules for constant buffers
-                    are fairly unusual and often confusing because they do not only rely on type alignment and effectively allow other variables into preceding padding in some cases.
-                    Most explanations I could find were extremely hand-wavy about those rules, so I decided to make this the one true source for HLSL memory layouts.
-                    The entire site was written from scratch (just like this page) except for the code editor (Monaco) and a string compression library.
-                </p>
-
-                <hr />
-                <h3 id="Tank_Wars">Tank Wars - University Game Project in Unity (2016)</h3>
-                <div class="center">
-                    <video style="max-height:400px" src="./media/video/TankWars.mp4" controls preload="none" poster="./media/video/TankWars.png" />
-                </div>
-                <p>
-                    As part of my university studies, I formed a team with two fellow students to make a small top-down shooter game in Unity (C#).
-                    It is based on a Flash game called Bubble Tanks and features an infinite world of small arenas where the difficulty and number of enemies increases with distance from the starting position.
-                    We utilized sparse arrays for generating the world in small chunks, the decorator pattern to dynamically apply modifiers to different base weapons and object pooling to minimize stutters.
-                    We were not graded on audiovisual quality and had several other projects due in the same semester, hence the bare-bones graphics in the video above.
-                </p>
-
-                <hr />
                 <h3 id="MiniRayTracer">MiniRayTracer - CPU Path Tracer (2016-2018)<a href="https://github.com/Maraneshi/MiniRayTracer" class="project_link" target="_blank"><link-svg /></a></h3>
                 <div class="center">
                     <img src="./media/MiniRayTracer8a.jpg" style="max-height:320px" onclick="CreateModalImage('./media/fullsize/MiniRayTracer8a.png')" />
@@ -535,6 +523,18 @@
                     <video width="320" src="./media/video/Mandelbrot7a.mp4" controls preload="none" poster="./media/video/Mandelbrot7a.jpg"></video>
                     <video width="320" src="./media/video/Mandelbrot10a.mp4" controls preload="none" poster="./media/video/Mandelbrot10a.jpg"></video>
                 </div>
+
+                <hr />
+                <h3 id="Tank_Wars">Tank Wars - University Game Project in Unity (2016)</h3>
+                <div class="center">
+                    <video style="max-height:400px" src="./media/video/TankWars.mp4" controls preload="none" poster="./media/video/TankWars.png" />
+                </div>
+                <p>
+                    As part of my university studies, I formed a team with two fellow students to make a small top-down shooter game in Unity (C#).
+                    It is based on a Flash game called Bubble Tanks and features an infinite world of small arenas where the difficulty and number of enemies increases with distance from the starting position.
+                    We utilized sparse arrays for generating the world in small chunks, the decorator pattern to dynamically apply modifiers to different base weapons and object pooling to minimize stutters.
+                    We were not graded on audiovisual quality and had several other projects due in the same semester, hence the bare-bones graphics in the video above.
+                </p>
 
                 <hr />
                 <h3 id="Insight">"Insight" Spectator UI for Natural Selection 2 (2012)<a href="https://forums.unknownworlds.com/discussion/117794" class="project_link" target="_blank"><link-svg /></a></h3>
