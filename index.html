@@ -360,8 +360,7 @@
                 <p>
                     Hi, my name is Mara and I am primarily a C++ developer with experience in games and embedded systems. I feel most at home doing deep dives into debugging problems and
                     anything where I can have a metric to optimize (frame time, compile time, export time, etc.). I put out fires wherever and whenever they come up and try to help my team be productive
-                    by improving the tools they work with. Graphics are a particular fondness of mine, as evidenced by many pretty pictures below. I am comfortable with D3D11 and HLSL, familiar with many graphics concepts and techniques at a high level and have a general idea of how D3D12 works and regularly help out people in the DirectX Discord.
-
+                    by improving the tools they work with. Graphics are a particular fondness of mine, as evidenced by many pretty pictures below. I am comfortable with D3D11 and HLSL, familiar with D3D12 and many graphics concepts and techniques at a high level and regularly help people out in the DirectX Discord.
                 </p>
                 <table>
                     <tr><th>Languages</th><td>German (Native/C2), English (C1)</td></tr>
@@ -469,9 +468,9 @@
                     This involved merging the images of multiple 2D LiDAR scanners to map the surrounding area, combining odometry data from three separate wheel motors with an inertial measurement unit
                     and the map to estimate the current position, velocity and orientation and coordinating the motors to drive towards a goal position and orientation in the most efficient way.
                     The three wheels could each rotate around their own axis separately, which made reconstructing linear and angular velocity for whole-robot odometry challenging.
-                    Since direct analytic solutions for inverse kinematics tend to only work for one or two specific movement patterns like turning in place, moving linearly or a circular curve
-                    and our particular wheel setup was not commonly found in literature, I devised a least-squares fit algorithm where based on the input speed and angle of each motor,
-                    it tries to iteratively find a linear and angular velocity that would result in those input values.
+                    Since direct analytic solutions for forward kinematics tend to only work for one or two specific movement patterns like turning in place, moving linearly or a circular curve
+                    and our particular wheel setup was not commonly found in literature, I decided to utilize a least-squares fit algorithm where based on the input speed and angle of each motor,
+                    it tries to iteratively find a linear and angular velocity for the entire robot that would result in those input values.
                 </p>
                 <div class="center">
                     <img src="./media/docking.png" style="max-height:280px" onclick="CreateModalImage('./media/docking.png')" />
